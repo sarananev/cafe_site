@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/* header */
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/mainvisual.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 16px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li {
+  padding-right: 27px;
+}
+
+.logo {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  filter: drop-shadow(1px 1px 10px #c0c0c0);
+}
+
+#header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  filter: drop-shadow(1px 1px 5px #c1bdbd);
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+}
+
+#header a:hover {
+  color: #e03131;
+}
+
+/* header SP版 */
+@media screen and (max-width: 767px) {
+  #header {
+    margin-bottom: 10px;
+    background-position: 30% 0%;
+  }
+}
+/* footer */
+#footer {
+  text-align: center;
+  margin: 12px auto;
+}
+#footer p {
+  font-size: 1rem;
+}
+
+/* style.scss */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+.wrapper {
+  max-width: 1000px;
+  padding: 80px 16px 150px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 7.2rem;
+  text-align: center;
+  color: #fff;
+  filter: drop-shadow(1px 1px 3px #c0c0c0);
+}
+
+h3 {
+  font-size: 4rem;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 14px;
+  border-bottom: solid 6px;
+  border-block-color: #E03131;
+}
+
+li {
+  list-style: none;
+  font-size: 1.44rem;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+/* main */
+/* memu */
+.menu-img {
+  background-image: url(../img/menu.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-content {
+  display: flex;
+}
+.menu-content .menu {
+  width: 50%;
+  text-align: center;
+  padding: 0 45px;
+}
+.menu-content .menu dl {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.menu-content .menu dl dt {
+  width: 87%;
+  text-align: start;
+  padding-top: 30px;
+  font-size: 1.4rem;
+  border-bottom: 1px dotted;
+  border-bottom-color: #666666;
+}
+.menu-content .menu dl dd {
+  width: 13%;
+  padding-top: 38px;
+  text-align: right;
+  font-size: 1.4rem;
+}
+
+.other {
+  margin-top: 60px;
+}
+
+.menu:first-child {
+  border-right: solid 1px #000;
+}
+
+/* about */
+.about-img {
+  background-image: url(../img/about.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  display: block;
+}
+.about-content .text {
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+.about-content .text ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-content .text ul li {
+  width: 50%;
+  text-align: start;
+  padding: 0 30px 45px;
+  line-height: 2;
+}
+
+.btn {
+  width: 160px;
+  height: 50px;
+  line-height: 3.5; /* btnの中心に文字配置 */
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.btn span {
+  font-size: 1.44rem;
+  color: #000;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+.btn::before 右の赤線
+.btn::after 下の赤線
+.btn span::before 左の赤線
+.btn span::after 上の赤線
+*/
+.btn::before,
+.btn::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background-color: #e03131;
+  transition: all 0.3s ease;
+}
+
+.btn span::before,
+.btn span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: #e03131;
+  transition: all 0.3s ease;
+}
+
+.btn::before,
+.btn span::before {
+  width: 2px;
+  height: 50%;
+}
+
+.btn::after,
+.btn span::after {
+  width: 20%;
+  height: 2px;
+}
+
+/*
+ホバー時の縦の動作
+右の赤線と左の赤線の高さを100%にする
+*/
+.btn:hover::before,
+.btn span:hover::before {
+  height: 100%;
+}
+
+/*
+ホバー時の横の動作
+下の赤線と上の赤線の横幅を100%にする
+*/
+.btn:hover::after,
+.btn span:hover::after {
+  width: 100%;
+}
+
+/* location */
+.location-img {
+  background-image: url(../img/location.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-content h3 {
+  margin-bottom: 70px;
+}
+.location-content .map {
+  margin-bottom: 20px;
+  filter: grayscale(1);
+}
+.location-content .info {
+  text-align: start;
+}
+.location-content .info p {
+  padding-bottom: 15px;
+  font-size: 1.44rem;
+  line-height: 1.6944444444;
+}
+.location-content iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* SP版 */
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+    padding-bottom: 0;
+  }
+  .wrapper {
+    padding: 30px 16px 60px;
+  }
+  /* memu SP版 */
+  .menu-img {
+    height: 94px;
+    background-attachment: local;
+    background-position: center;
+  }
+  .menu-content {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .menu-content .menu {
+    width: 100%;
+    border-right: none;
+    padding: 0 0;
+  }
+  .menu-content .menu dl {
+    margin-top: 30px;
+  }
+  .menu-content .menu dl dt {
+    width: 85%;
+  }
+  .menu-content .menu dl dd {
+    width: 15%;
+  }
+  /* food SP版 */
+  .food {
+    margin-top: 40px;
+  }
+  /* about SP版*/
+  .about-img {
+    height: 94px;
+    background-attachment: local;
+    background-position: right;
+  }
+  .about-content {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .about-content .text {
+    padding-top: 90px;
+    padding-bottom: 25px;
+  }
+  .about-content .text ul {
+    flex-direction: column;
+  }
+  .about-content .text ul li {
+    width: 100%;
+    padding: 0 10px 20px;
+  }
+  /* location SP版 */
+  .location-img {
+    height: 94px;
+    background-attachment: local;
+    background-position: top;
+  }
+  .location-content h3 {
+    margin-bottom: 25px;
+  }
+}/*# sourceMappingURL=style.css.map */
