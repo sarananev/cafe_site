@@ -26,6 +26,7 @@ nav ul li {
   left: 0;
   right: 0;
   filter: drop-shadow(1px 1px 10px #c0c0c0);
+  padding: 0 16px;
 }
 
 #header a {
@@ -344,7 +345,7 @@ p {
     margin-bottom: 20px;
   }
   .about-content .text {
-    padding-top: 90px;
+    padding-top: 30px;
     padding-bottom: 25px;
   }
   .about-content .text ul {
